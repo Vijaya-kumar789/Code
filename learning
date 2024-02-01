@@ -1,0 +1,11 @@
+ function foo(...rest){
+     var sum = 0
+for (var i = 0;i<rest.length;i++){
+    sum = sum+rest[i]
+}
+return sum
+}
+ console.log(foo(1,23))
+ console.log(foo(111,23))
+ console.log(foo(123,234))
+ console.log(foo(1512,23,12,6454))
