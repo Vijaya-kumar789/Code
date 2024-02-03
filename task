@@ -168,3 +168,45 @@ var palindrome = (arr) => {
       return isPalindrome;
       }
 console.log(palindrome([1,2,3,2,1]));//output=true
+
+//07) Remove duplicates from an Array
+//anonymous function
+function ar(array){
+    let ar = [...new Set(array)];
+    return arr;               
+}
+console.log(arr([1,1,2,3,4,5]));//output[ 1, 2, 3, 4, 5 ]
+//IIFE function
+(function(array){
+    var dup = [...new Set(array)];
+    console.log(dup);
+   })([1,1,2,3,4,5]);//output[ 1, 2, 3, 4, 5 ]
+  
+   //8) Rotate an array by k times
+//anonymous function
+   function res(num,k){
+    var n=num.length;
+    k%=n;
+    var rotate=[];
+    for (var i = 0;i<n;i++){
+        rotate[(i+k)%n]=num[i];
+    }
+    for (var i = 0;i<n;i++){
+        num[i]=rotate[i];
+    }
+   return rotate;
+   }
+   console.log(res([1,2,3,4,5],3));//output[ 3, 4, 5, 1, 2 ]
+   //IIFE function
+   (function(num,k){
+       var n=num.length;
+       k%=n;
+       var rotate=[];
+       for (var i=0;i<n;i++){
+           rotate[(i+k)%n]=num[i];
+       }
+       for (var i=0;i<n;i++){
+           num[i]=rotate[i];
+       }
+       console.log(rotate);
+   })([1,2,3,4,5],3);//output[ 3, 4, 5, 1, 2 ]
